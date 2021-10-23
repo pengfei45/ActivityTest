@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    tools:context=".media.PlayMusicActivity">
+
+
+    <Button
+        android:id="@+id/btnPlay_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="播放"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnPause_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="暂停"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnStop_play_music"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="停止"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+    <VideoView
+        android:id="@+id/videoView_play_video"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:visibility="invisible"/>
+
+
+</LinearLayout>

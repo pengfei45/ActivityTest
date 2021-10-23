@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newsTitleLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newsapp.Main2Activity">
+
+
+    <fragment
+        android:id="@+id/newsTitleFrag"
+        android:name="com.fan.activitytest.newsapp.NewsTitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

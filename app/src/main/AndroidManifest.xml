@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fan.activitytest">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="internalOnly"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".App"
+        android:theme="@style/AppTheme">
+        <activity android:name=".jetpack.JetpackMainActivity"/>
+        <activity
+            android:name=".material.FruitMaterialActivity"
+            android:theme="@style/FruitActivityTheme" />
+        <activity android:name=".material.MaterialActivity" />
+        <activity android:name=".net.retrofittest.RetrofitTestActivity" />
+        <activity android:name=".net.ParseXMLActivity" />
+        <activity android:name=".net.HttpURLConnectionActivity" />
+        <activity android:name=".net.OkHttpActivity" />
+        <activity android:name=".net.WebViewActivity" />
+        <activity android:name=".net.NetActivity" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyForegroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".service.ServiceTestActivity" />
+
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".media.PlayMusicActivity" />
+        <activity android:name=".media.MediaActivity" />
+        <activity android:name=".CPTestActivity" />
+        <activity
+            android:name=".receiver.practice.LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".newsapp.Main2Activity" />
+        <activity android:name=".newsapp.NewsContentActivity" />
+        <activity android:name=".fragment.FragmentTestActivity" />
+        <activity android:name=".chatui.ChatUIActivity" />
+        <activity android:name=".recycler.RecyclerActivity" />
+        <activity android:name=".list.ListViewActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".receiver.ReceiverTestActivity" />
+        <activity android:name=".storge.FilePersistenceActivity" />
+        <activity android:name=".database.SQLiteActivity" />
+        <activity android:name=".permissionTest.PermissionMainActivity" />
+        <activity android:name=".conProvider.ReadContactsActivity" />
+        <activity android:name=".media.PlayVideoActivity" />
+        <activity android:name=".net.ParseJsonActivity" />
+
+        <receiver
+            android:name=".receiver.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="90">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.fan.activitytest.BootCompleteReceiver" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.fan.activitytest.BootCompleteReceiver" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fan.activitytest.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

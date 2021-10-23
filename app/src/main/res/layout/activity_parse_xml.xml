@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".net.ParseXMLActivity">
+
+
+    <TextView
+        android:id="@+id/tvPull_activity_xml"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="Pull解析测试" />
+
+    <TextView
+        android:id="@+id/tvSAX_activity_xml"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="SAX 解析测试"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/tvResult_activity_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textAllCaps="false"
+        android:text="结果展示" />
+
+</LinearLayout>

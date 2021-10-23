@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".media.MediaActivity">
+
+
+    <TextView
+        android:id="@+id/tvSendNotice_media"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="发送通知"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTakePhoto_media"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="拍照"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSendNotice_media"
+        app:layout_constraintBottom_toTopOf="@id/imgPhoto_media"/>
+
+
+    <ImageView
+        android:id="@+id/imgPhoto_media"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/big_image"
+        app:layout_goneMarginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toBottomOf="@id/tvTakePhoto_media"
+        app:layout_constraintBottom_toTopOf="@id/tvGetPhoto_media"
+        android:contentDescription="@string/big_photo" />
+
+    <TextView
+        android:id="@+id/tvGetPhoto_media"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="相册选择图片"
+        app:layout_goneMarginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgPhoto_media"/>
+
+    <TextView
+        android:id="@+id/tvPlayMusic_media"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="播放音频"
+        app:layout_goneMarginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGetPhoto_media"/>
+
+
+    <TextView
+        android:id="@+id/tvPlayVideo_media"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="播放视频"
+        app:layout_goneMarginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPlayMusic_media"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

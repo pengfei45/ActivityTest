@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/edit_file"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:hint="请输入保存的内容"
+        android:textSize="18sp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:gravity="center_vertical"/>
+
+    <Button
+        android:id="@+id/saveSPData"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="保存SPS数据"
+        app:layout_constraintTop_toBottomOf="@id/edit_file"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:includeFontPadding="false"/>
+
+    <Button
+        android:id="@+id/getSPData"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="获取SPS数据"
+        app:layout_constraintTop_toBottomOf="@id/saveSPData"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:includeFontPadding="false"/>
+
+    <TextView
+        android:id="@+id/tv_show_sp_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff9900"
+        android:textSize="18sp"
+        android:text="sdsd"
+        app:layout_constraintTop_toBottomOf="@id/getSPData"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

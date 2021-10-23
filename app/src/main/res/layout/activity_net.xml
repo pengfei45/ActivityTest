@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".net.NetActivity">
+
+
+    <TextView
+        android:id="@+id/tvWebView_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:text="HWebView 测试" />
+
+    <TextView
+        android:id="@+id/tvHttpURLConnection_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:text="HttpURLConnection 测试" />
+
+    <TextView
+        android:id="@+id/tvOkHttp_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:text="OkHttp 测试" />
+
+    <TextView
+        android:id="@+id/tvXml_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:text="XML解析测试" />
+
+    <TextView
+        android:id="@+id/tvJson_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:text="json 解析测试" />
+
+    <TextView
+        android:id="@+id/tvRetrofitBase_activity_net"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textAllCaps="false"
+        android:text="Retrofit基本使用" />
+
+</LinearLayout>
