@@ -2,3 +2,4 @@ include ':app'
 rootProject.name = "ActivityTest"
 include ':databasetest'
 include ':providertest'
+include ':fanweather'

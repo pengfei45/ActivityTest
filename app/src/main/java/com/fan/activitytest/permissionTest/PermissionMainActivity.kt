@@ -10,6 +10,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.fan.activitytest.BaseActivity
 import com.fan.activitytest.R
+import com.fan.permissionutil.PermissionUtil
 import kotlinx.android.synthetic.main.activity_permission_main.*
 
 class PermissionMainActivity : BaseActivity() {
@@ -19,33 +20,45 @@ class PermissionMainActivity : BaseActivity() {
         setContentView(R.layout.activity_permission_main)
 
         btnCallPhone_per_main.setOnClickListener {
-            if (ContextCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE),1)
-            }else{
+            if (ContextCompat.checkSelfPermission(
+                    this, Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                PermissionUtil.request(
+                    this, Manifest.permission.CALL_PHONE
+                ) { allGranted, deniedList ->
+                    if (allGranted) {
+                        call()
+                    } else {
+                        Toast.makeText(this, "你拒绝了权限", Toast.LENGTH_SHORT).show()
+                    }
+                }
+//                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CALL_PHONE), 1)
+            } else {
                 call()
             }
         }
 
     }
 
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
-        when(requestCode){
-            1 -> {
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    call()
-                }else{
-                    Toast.makeText(this,"你拒绝了权限",Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-
-    }
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//
+//        when(requestCode){
+//            1 -> {
+//                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+//                    call()
+//                }else{
+//                    Toast.makeText(this,"你拒绝了权限",Toast.LENGTH_SHORT).show()
+//                }
+//            }
+//        }
+//
+//    }
 
 
     private fun call() {
